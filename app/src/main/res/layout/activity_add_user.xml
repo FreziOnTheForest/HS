@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddUserActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/dark_blue"
+        android:gravity="top"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/backButtonProfile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription=" "
+            android:scaleType="fitXY"
+            android:src="@drawable/back_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Профиль"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/profilePhoto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/backButtonProfile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/profile_photo" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="506dp"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:gravity="center"
+        android:layout_marginBottom="0dp" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="375dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Имя пользователя"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <EditText
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/montserrat_bold"
+                android:hint="Имя пользователя"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="375dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Электронная почта"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <EditText
+                android:id="@+id/userEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/montserrat_bold"
+                android:hint="Электронная почта"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="15dp"
+                tools:layout_editor_absoluteY="151dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="375dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Пароль"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <EditText
+                android:id="@+id/userPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/montserrat_bold"
+                android:hint="Пароль"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:cardBackgroundColor="@color/blue"
+            app:cardCornerRadius="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            app:layout_constraintVertical_bias="0.178">
+
+            <Button
+                android:id="@+id/saveButtonProfile"
+                android:layout_width="188dp"
+                android:layout_height="60dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Сохранить"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:backgroundTint="@color/blue"
+                tools:layout_editor_absoluteX="70dp"
+                tools:layout_editor_absoluteY="319dp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginBottom="55dp"
+            android:gravity="center"
+            app:cardBackgroundColor="@color/red"
+            app:cardCornerRadius="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <Button
+                android:id="@+id/profileExitBut"
+                android:layout_width="188dp"
+                android:layout_height="60dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Удалить"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:backgroundTint="@color/red"
+                tools:layout_editor_absoluteX="70dp"
+                tools:layout_editor_absoluteY="319dp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameProfileTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/montserrat"
+        app:errorEnabled="true">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailProfileTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/montserrat"
+        app:errorEnabled="true">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</RelativeLayout>

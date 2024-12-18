@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_code"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateCodeActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/street_facade"
+        android:scaleType="centerCrop" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_bold"
+            android:shadowColor="@color/dark_blue"
+            android:text="Создайте пин-код"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pinIndicator"
+            android:layout_width="138dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/dot1"
+                style="@style/pinDotUnfill"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/dot2"
+                style="@style/pinDotUnfill"
+                android:layout_marginStart="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/dot3"
+                app:layout_constraintStart_toEndOf="@+id/dot1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/dot3"
+                style="@style/pinDotUnfill"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="82dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/dot4"
+                app:layout_constraintStart_toEndOf="@+id/dot2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/dot4"
+                style="@style/pinDotUnfill"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="322dp"
+            android:layout_height="238dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="#9944E0F5"
+            app:cardCornerRadius="15dp">
+
+            <GridLayout
+                android:id="@+id/keypad"
+                android:layout_width="288dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:columnCount="3">
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="80.89dp"
+                    android:layout_height="154px"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_border"
+                    android:backgroundTint="@color/dark_blue"
+                    android:fontFamily="@font/montserrat"
+                    android:text="1"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="70px" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="80.89dp"
+                    android:layout_height="154px"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_border"
+                    android:backgroundTint="@color/dark_blue"
+                    android:fontFamily="@font/montserrat"
+                    android:text="2"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="70px" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="80.89dp"
+                    android:layout_height="154px"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_border"
+                    android:backgroundTint="@color/dark_blue"
+                    android:fontFamily="@font/montserrat"
+                    android:text="3"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="70px" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="80.89dp"
+                    android:layout_height="154px"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_border"
+                    android:backgroundTint="@color/dark_blue"
+                    android:fontFamily="@font/montserrat"
+                    android:text="4"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="70px" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="80.89dp"
+                    android:layout_height="154px"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_border"
+                    android:backgroundTint="@color/dark_blue"
+                    android:fontFamily="@font/montserrat"
+                    android:text="5"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="70px" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="80.89dp"
+                    android:layout_height="154px"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_border"
+                    android:backgroundTint="@color/dark_blue"
+                    android:fontFamily="@font/montserrat"
+                    android:text="6"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="70px" />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="80.89dp"
+                    android:layout_height="154px"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_border"
+                    android:backgroundTint="@color/dark_blue"
+                    android:fontFamily="@font/montserrat"
+                    android:text="7"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="70px" />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="80.89dp"
+                    android:layout_height="154px"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_border"
+                    android:backgroundTint="@color/dark_blue"
+                    android:fontFamily="@font/montserrat"
+                    android:text="8"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="70px" />
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="80.89dp"
+                    android:layout_height="154px"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_border"
+                    android:backgroundTint="@color/dark_blue"
+                    android:fontFamily="@font/montserrat"
+                    android:text="9"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="70px" />
+            </GridLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</FrameLayout>
